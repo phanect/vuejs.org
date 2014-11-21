@@ -16,11 +16,11 @@ var demo = new Vue({
   computed: {
     fullName: {
       // the getter should return the desired value
-      get: function () {
+      $get: function () {
         return this.firstName + ' ' + this.lastName
       },
       // the setter is optional
-      set: function (newValue) {
+      $set: function (newValue) {
         var names = newValue.split(' ')
         this.firstName = names[0]
         this.lastName = names[names.length - 1]
